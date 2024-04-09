@@ -17,12 +17,13 @@ public class StudentService implements StudentServiceImpl {
 
     @Override
     public List<StudentDTO> getAllStudents() {
-        return null;
+        return students; // 직접 내부 리스트 반환
     }
 
     @Override
     public StudentDTO searchStudent(String studentId)  {
-       return null;
+
+        return null;
     }
 
     @Override
