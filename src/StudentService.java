@@ -17,19 +17,12 @@ public class StudentService implements StudentServiceImpl {
 
     @Override
     public List<StudentDTO> getAllStudents() {
-        return students; // 직접 내부 리스트 반환
+        return null;
     }
 
     @Override
     public StudentDTO searchStudent(String studentId)  {
-        for (StudentDTO student : students) {
-            if (student.getStudentId().equals(studentId)) {
-                return student;
-            }
-        }
-        // 학생을 찾을 수 없는 경우 null 반환
-        // 또는 학생을 찾을 수 없음을 알리는 예외를 발생시킬 수도 있습니다.
-        return null;
+       return null;
     }
 
     @Override

@@ -48,36 +48,10 @@ public class Main {
                         // 학생 등록 로직
                         break;
                     case 2:
-                        System.out.println("모든 학생 정보 조회:");
-                        List<StudentDTO> students = studentServiceImpl.getAllStudents();
-                        if (students.isEmpty()) {
-                            System.out.println("등록된 학생이 없습니다.");
-                        } else {
-                            for (StudentDTO stu : students) {
-                                System.out.println("등록번호: " + stu.getId() +", 학번: " + stu.getStudentId() + ", 이름: " + stu.getName() +
-                                        ", 국어 성적: " + stu.getKoreanScore() +
-                                        ", 영어 성적: " + stu.getEnglishScore() +
-                                        ", 수학 성적: " + stu.getMathScore());
-                            }
-                        }
+
                         break;
                     case 3:
-                        System.out.println("학생 학번을 입력하세요: ");
-                        studentId = scanner.nextLine();
 
-                        StudentDTO searchStudent = studentServiceImpl.searchStudent(studentId);
-                        if (searchStudent != null) {
-                            // 학생 정보 출력
-                            System.out.println("등록번호: " + searchStudent.getId() +", 학번: " + searchStudent.getStudentId() + ", 이름: " + searchStudent.getName() +
-                                    ", 국어 성적: " + searchStudent.getKoreanScore() +
-                                    ", 영어 성적: " + searchStudent.getEnglishScore() +
-                                    ", 수학 성적: " + searchStudent.getMathScore());
-
-                        } else {
-                            // 학생을 찾을 수 없는 경우
-                            System.out.println("해당 학번의 학생을 찾을 수 없습니다.");
-                        }
-                        break;
                     case 4:
                         // 학생 수정 로직
                         break;
